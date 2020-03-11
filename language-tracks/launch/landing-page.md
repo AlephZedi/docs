@@ -5,17 +5,16 @@
 In order to design an icon for the site open a new issue in the [exercism/website-icons](https://github.com/exercism/website-icons/issues) repository, answering the following questions:
 
 * Does the language have an official logo? If so
-  - please include a link to an example
-  - please list the attribution rights of that logo
+  * please include a link to an example
+  * please list the attribution rights of that logo
 * Does the language have an unofficial logo? If so
-  - please explain the ways in which people use the unofficial logo
-  - please include a link to an example
-  - please list the attribution rights of that logo
+  * please explain the ways in which people use the unofficial logo
+  * please include a link to an example
+  * please list the attribution rights of that logo
 
 ## Introductory copy
 
-Each track has a landing page on the site.
-E.g. https://v2.exercism.io/tracks/go
+Each track has a landing page on the site. E.g. [https://v2.exercism.io/tracks/go](https://v2.exercism.io/tracks/go)
 
 The page is meant to entice people into wanting to try the language out.
 
@@ -33,5 +32,5 @@ More on this in the [documentation about documentation](https://github.com/exerc
 
 ## Maintainer bios
 
-Write a short bio for yourself, and add it to the [maintainer config](/maintaining-a-track/maintainer-configuration.md).
-As you bring on new co-maintainers, have them add themselves to the file as well.
+Write a short bio for yourself, and add it to the [maintainer config](../../maintaining-a-track/maintainer-configuration.md). As you bring on new co-maintainers, have them add themselves to the file as well.
+

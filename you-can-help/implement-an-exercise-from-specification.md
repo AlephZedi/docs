@@ -1,34 +1,25 @@
-﻿# Porting an Exercise to Another Language Track
+# implement-an-exercise-from-specification
 
-[problem-specifications]: http://github.com/exercism/problem-specifications/tree/master/exercises
-[support-chat]: https://gitter.im/exercism/support
-[configlet]: https://github.com/exercism/configlet#configlet
-[exercises]: /language-tracks/configuration/exercises.md
+\# Porting an Exercise to Another Language Track
 
 Exercism has a lot of exercises in a lot of languages.
 
-There is a common pool of problem definitions, which can be implemented in any
-of the language tracks.
+There is a common pool of problem definitions, which can be implemented in any of the language tracks.
 
-The language-agnostic definition lives in the [problem-specifications][] repository, within
-the `exercises/` directory:
+The language-agnostic definition lives in the [problem-specifications](http://github.com/exercism/problem-specifications/tree/master/exercises) repository, within the `exercises/` directory:
 
-    /exercises/$SLUG/
-    ├── canonical-data.json (OPTIONAL)
-    ├── description.md
-    └── metadata.yml
+```text
+/exercises/$SLUG/
+├── canonical-data.json (OPTIONAL)
+├── description.md
+└── metadata.yml
+```
 
-The shared data will always have a `description.md` file which contains the basic
-problem specification, and which later gets used to generate the README for the
-exercises.
+The shared data will always have a `description.md` file which contains the basic problem specification, and which later gets used to generate the README for the exercises.
 
-The `metadata.yml` contains a summary (or "blurb") of the exercise, as well as
-attribution and some other handy things that get used in various places.
+The `metadata.yml` contains a summary \(or "blurb"\) of the exercise, as well as attribution and some other handy things that get used in various places.
 
-For some exercises we have defined a `canonical-data.json` file. If this exists
-then you won't need to go look at implementations in other languages. This will
-contain the implementation notes and test inputs and outputs that you'll need
-to create a test suite in your target language.
+For some exercises we have defined a `canonical-data.json` file. If this exists then you won't need to go look at implementations in other languages. This will contain the implementation notes and test inputs and outputs that you'll need to create a test suite in your target language.
 
 ## Finding an Exercise to Port
 
@@ -36,32 +27,28 @@ Navigate to the language track on Exercism via the [http://exercism.io/languages
 
 The last item in the sidebar will be about contributing. Go to that section.
 
-This is a full list of every exercise that exists, but has not yet been implemented
-in that language track.
+This is a full list of every exercise that exists, but has not yet been implemented in that language track.
 
 For every exercise it will link to:
 
-- The generic README.
-- The canonical data (if it exists).
-- All the individual language implementations.
+* The generic README.
+* The canonical data \(if it exists\).
+* All the individual language implementations.
 
 ## Implementing the Exercise
 
-You'll need to find the `slug` for the exercise. That's the URL-friendly identifier
-for an exercise that is used throughout all of Exercism.
+You'll need to find the `slug` for the exercise. That's the URL-friendly identifier for an exercise that is used throughout all of Exercism.
 
-**The name of the exercise directory in the [problem-specifications][] repository is the slug.**
+**The name of the exercise directory in the** [**problem-specifications**](http://github.com/exercism/problem-specifications/tree/master/exercises) **repository is the slug.**
 
-Create a new directory named after the slug in the `exercises` directory of the language
-track repository.
+Create a new directory named after the slug in the `exercises` directory of the language track repository.
 
 The exercise should consist of, at minimum:
 
 * A test suite.
 * A reference solution that passes the tests.
 
-Each language track might have additional requirements; check the README in
-the repository for the track.
+Each language track might have additional requirements; check the README in the repository for the track.
 
 ### The Test Suite
 
@@ -76,30 +63,25 @@ The reference solution is named something with `example` or `Example` in the pat
 
 Again, check the other exercises to see what the naming pattern is.
 
-The solution does not need to be particularly great code, it is only used to verify
-that the exercise is coherent.
+The solution does not need to be particularly great code, it is only used to verify that the exercise is coherent.
 
 ### Configuring the Exercise
 
 Add a new entry in the `exercises` key in the `config.json` file in the root of the repository.
 
-See the [exercise configuration document][exercises] for a detailed description of what you need to add to this entry.
+See the [exercise configuration document](../language-tracks/configuration/exercises.md) for a detailed description of what you need to add to this entry.
 
-We have a tool, [configlet][configlet] that will help make sure that everything is configured right.
-Download that and run it against the track repository.
+We have a tool, [configlet](https://github.com/exercism/configlet#configlet) that will help make sure that everything is configured right. Download that and run it against the track repository.
 
 ### Submitting a Pull Request
 
 Rebase against the most recent upstream master, and submit a pull request.
 
-If you have questions your best bet is the [support chat][support-chat]. Once you
-figure it out, if you could help improve this documentation, that would be great!
+If you have questions your best bet is the [support chat](https://gitter.im/exercism/support). Once you figure it out, if you could help improve this documentation, that would be great!
 
 ### Providing Feedback on the Site for an Exercise You Implemented
 
-Once you've created an exercise, you'll probably want to provide feedback to people who
-submit solutions to it. By default you only get access to exercises you've submitted
-a solution for.
+Once you've created an exercise, you'll probably want to provide feedback to people who submit solutions to it. By default you only get access to exercises you've submitted a solution for.
 
 You can fetch the problem using the CLI:
 
@@ -107,5 +89,5 @@ You can fetch the problem using the CLI:
 $ exercism fetch <track_id> <slug>
 ```
 
-Go ahead and submit the reference solution that you wrote when creating the problem.
-Remember to archive it if you don't want other people to comment on it.
+Go ahead and submit the reference solution that you wrote when creating the problem. Remember to archive it if you don't want other people to comment on it.
+

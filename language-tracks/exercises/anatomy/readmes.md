@@ -1,4 +1,6 @@
-﻿# READMEs
+# readmes
+
+\# READMEs
 
 Exercise READMEs are generated and committed to the repository.
 
@@ -6,12 +8,11 @@ Exercise READMEs are generated and committed to the repository.
 
 ### Setup
 
-Install [configlet][]. You will need version 3.0.0 or higher.
+Install [configlet](https://github.com/exercism/configlet). You will need version 3.0.0 or higher.
 
-If any of the exercises in the track are based on problems in the [problem-specifications][] repository, then you will
-need to have a copy of that repository locally on disk, in the same directory as your track.
+If any of the exercises in the track are based on problems in the [problem-specifications](https://github.com/exercism/problem-specifications/tree/master/exercises) repository, then you will need to have a copy of that repository locally on disk, in the same directory as your track.
 
-```
+```text
 .
 ├── the-track/
 └── problem-specifications/
@@ -21,7 +22,7 @@ need to have a copy of that repository locally on disk, in the same directory as
 
 Assuming that you are in the root of the track repository, generate the README for an exercise with the slug `foo` using the following command:
 
-```
+```text
 configlet generate . --only foo
 ```
 
@@ -32,30 +33,29 @@ The command is build up as follows:
 * `.` - the path to the root of the repository
 * `--only foo` - a flag specifying which exercise to generate. If you leave off the flag, the tool will generate all the READMEs.
 
-
 ## The README Template
 
 Each track has a default template in `$TRACK_ROOT/config/exercise-readme.go.tmpl`, and an exercise may override that template by creating a `$TRACK_ROOT/exercises/$SLUG/.meta/readme.go.tmpl` file.
 
-The template is written using Go's [text/template][text-template] package.
+The template is written using Go's \[text/template\]\[text-template\] package.
 
 There are a number of values available in the template:
 
-`.Spec` represents the problem specification, which is either a shared specification from [problem-specifications][], or a custom specification found in the exercise's `.meta` directory. The following values on `.Spec` can be referenced within the template:
+`.Spec` represents the problem specification, which is either a shared specification from [problem-specifications](https://github.com/exercism/problem-specifications/tree/master/exercises), or a custom specification found in the exercise's `.meta` directory. The following values on `.Spec` can be referenced within the template:
 
-- `.Spec.Slug` - the exercise's slug
-- `.Spec.Name` - the wordified slug
-- `.Spec.MixedCaseName` - the name converted to mixed case, e.g. _Hello World_ becomes `HelloWorld`
-- `.Spec.SnakeCaseName` - the name converted to snake case, e.g. _Hello World_ becomes `hello_world`
-- `.Spec.Description` - the contents of the optional `$TRACK_ROOT/exercises/$SLUG/.meta/description.md` file
-- `.Spec.Source` - a textual description of where the idea for the exercise came from (optional)
-- `.Spec.SourceURL` - a link to something about the source (optional)
-- `.Spec.Credits` - combines source and source_url into a readable bit of metadata
+* `.Spec.Slug` - the exercise's slug
+* `.Spec.Name` - the wordified slug
+* `.Spec.MixedCaseName` - the name converted to mixed case, e.g. _Hello World_ becomes `HelloWorld`
+* `.Spec.SnakeCaseName` - the name converted to snake case, e.g. _Hello World_ becomes `hello_world`
+* `.Spec.Description` - the contents of the optional `$TRACK_ROOT/exercises/$SLUG/.meta/description.md` file
+* `.Spec.Source` - a textual description of where the idea for the exercise came from \(optional\)
+* `.Spec.SourceURL` - a link to something about the source \(optional\)
+* `.Spec.Credits` - combines source and source\_url into a readable bit of metadata
 
 In addition to the values on `.Spec`, there are two additional bits of text that can be included:
 
-- `.Hints` - the contents of the optional `$TRACK_ROOT/exercises/$SLUG/.meta/hints.md` file.
-- `.TrackInsert` - the contents of the `$TRACK_ROOT/config/exercise-readme-insert.md` file.
+* `.Hints` - the contents of the optional `$TRACK_ROOT/exercises/$SLUG/.meta/hints.md` file.
+* `.TrackInsert` - the contents of the `$TRACK_ROOT/config/exercise-readme-insert.md` file.
 
 ### Go's Text/Template Package
 
@@ -69,7 +69,7 @@ You don't need much of the Go text/template language. The three things that are 
 
 The default contents of `$TRACK_ROOT/config/exercise-readme.go.tmpl` is below.
 
-```
+```text
 # {{ .Spec.Name }}
 
 {{ .Spec.Description -}}
@@ -92,7 +92,7 @@ It's possible to submit an incomplete solution so you can see how others have co
 
 ### Description
 
-The problem descriptions in the [problem-specifications][problem-specifications] repository tread a very fine line between useful ambiguity and confusing vagueness. Because the shared problem description is the same whether you're solving the problem in C++ or in Lua, it needs to be high-level enough to allow for the syntactic, semantic, and philosophical differences in the various languages.
+The problem descriptions in the [problem-specifications](https://github.com/exercism/problem-specifications/tree/master/exercises) repository tread a very fine line between useful ambiguity and confusing vagueness. Because the shared problem description is the same whether you're solving the problem in C++ or in Lua, it needs to be high-level enough to allow for the syntactic, semantic, and philosophical differences in the various languages.
 
 Having said that, each track is free to write a more specific description if they want to by creating their own `description.md` file and placing it in the exercise's `.meta` directory.
 
@@ -104,5 +104,3 @@ The `$TRACK_ROOT/config/exercise-readme-insert.md` gets included in _all_ the ex
 
 Anything that is specific to just one exercise, should be added to the `$TRACK_ROOT/exercises/$SLUG/.meta/hints.md` file.
 
-[problem-specifications]: https://github.com/exercism/problem-specifications/tree/master/exercises
-[configlet]: https://github.com/exercism/configlet

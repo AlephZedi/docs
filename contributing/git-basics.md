@@ -31,7 +31,7 @@ The basic workflow becomes:
 * push to `origin` so you have the latest code in your fork
 * check out a branch
 * make the changes, commit them
-* rebase onto the upstream master (and resolve any conflicts)
+* rebase onto the upstream master \(and resolve any conflicts\)
 * push your branch up to `origin`
 * submit a pull request
 
@@ -39,22 +39,13 @@ If you're asked to tweak your work, you can keep pushing it to the branch, and i
 
 ## Commit Messages
 
-Commit messages are communication and documentation. They're a log of more
-than just _what_ happened, they're about _why_ it was done.
+Commit messages are communication and documentation. They're a log of more than just _what_ happened, they're about _why_ it was done.
 
-The longer a project is active, the more people involved, the larger the
-codebase, the more important it is to have good commit messages.
+The longer a project is active, the more people involved, the larger the codebase, the more important it is to have good commit messages.
 
-There's an excellent lightning talk by Ryan Geary called [Do Your Commit
-Messages
-Suck?](https://www.youtube.com/watch?v=8YjSty6bfog).
-It's funny and enlightening, and you should watch it.
+There's an excellent lightning talk by Ryan Geary called [Do Your Commit Messages Suck?](https://www.youtube.com/watch?v=8YjSty6bfog). It's funny and enlightening, and you should watch it.
 
-Two articles that have very clear guidelines about how to write
-excellent commit messages are Tim Pope's
-[A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-and Chris Beams' [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
-Please read them.
+Two articles that have very clear guidelines about how to write excellent commit messages are Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) and Chris Beams' [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/). Please read them.
 
 ### Examples
 
@@ -70,10 +61,7 @@ be4c410 rename example file
 bb89a77 update config
 ```
 
-All of these commits are about a single thing: adding a new problem. They
-should be a single commit. They don't have to start out that way (life is
-messy), but once you're done, you should squash everything into one commit,
-and rename it cohesively:
+All of these commits are about a single thing: adding a new problem. They should be a single commit. They don't have to start out that way \(life is messy\), but once you're done, you should squash everything into one commit, and rename it cohesively:
 
 ```bash
 f4314e5 add spinning wheel problem
@@ -81,11 +69,9 @@ f4314e5 add spinning wheel problem
 
 ## Resetting `master`
 
-If you've already made changes on your master so that it has diverged from the
-upstream you can reset it.
+If you've already made changes on your master so that it has diverged from the upstream you can reset it.
 
-First create a backup of your branch so that you can find any changes. Just in
-case.
+First create a backup of your branch so that you can find any changes. Just in case.
 
 ```bash
 git checkout master
@@ -100,9 +86,7 @@ git fetch upstream
 git reset --hard upstream/master
 ```
 
-If you do a git log at this point you'll see that you have *exactly* the
-commits that are in the upstream repository. Your commits aren't gone, they're
-just not in master anymore.
+If you do a git log at this point you'll see that you have _exactly_ the commits that are in the upstream repository. Your commits aren't gone, they're just not in master anymore.
 
 To put this on your GitHub fork, you'll probably need to use the `--force` flag:
 
@@ -112,16 +96,11 @@ git push --force origin master
 
 ## Squashing
 
-Squashing commits into a single commit is particularly useful when the change
-happened in lots of little (sometimes confusing) steps, but it really is one
-change.
+Squashing commits into a single commit is particularly useful when the change happened in lots of little \(sometimes confusing\) steps, but it really is one change.
 
-There are a number of ways to accomplish this, and many people like to use an
-[interactive rebase](#interactive-rebase), but it can be tricky if you haven't set git up to open
-your favorite editor.
+There are a number of ways to accomplish this, and many people like to use an [interactive rebase](git-basics.md#interactive-rebase), but it can be tricky if you haven't set git up to open your favorite editor.
 
-An easier way to do this is to un-commit everything, putting it back into the
-staging area, and then committing it again.
+An easier way to do this is to un-commit everything, putting it back into the staging area, and then committing it again.
 
 Using the example from above, we have 5 commits that should be squashed into one.
 
@@ -139,16 +118,13 @@ To un-commit them, use the following incantation:
 $ git reset --soft HEAD^^^^^
 ```
 
-Notice that there are 5 carets, one for each commit that you want to
-un-commit. You could also say:
+Notice that there are 5 carets, one for each commit that you want to un-commit. You could also say:
 
 ```bash
 $ git reset --soft HEAD~5
 ```
 
-If you do a `git status` now, you'll see all the changed files, and they're
-staged and ready to commit. If you do a `git log`, you'll see that the most
-recent commit is from someone else.
+If you do a `git status` now, you'll see all the changed files, and they're staged and ready to commit. If you do a `git log`, you'll see that the most recent commit is from someone else.
 
 Next, commit, as usual:
 
@@ -156,13 +132,9 @@ Next, commit, as usual:
 $ git commit -m "Add spinning wheel problem"
 ```
 
-Now if you do a `git status` you may get a warning saying that your origin and
-your branch have diverged. This is completely normal, since the origin has 5
-commits and you have 1 (different) one.
+Now if you do a `git status` you may get a warning saying that your origin and your branch have diverged. This is completely normal, since the origin has 5 commits and you have 1 \(different\) one.
 
-The next step is to force push this up to your branch, which will
-automatically update the pull request, replacing the old commits with the new
-one.
+The next step is to force push this up to your branch, which will automatically update the pull request, replacing the old commits with the new one.
 
 ```bash
 $ git push --force origin spinning-wheel
@@ -170,16 +142,13 @@ $ git push --force origin spinning-wheel
 
 ## Resources
 
-If you're completely new to git, there are a number of resources that can help
-get you feeling more comfortable with it.
+If you're completely new to git, there are a number of resources that can help get you feeling more comfortable with it.
 
 * [Git Immersion](http://gitimmersion.com/)
 * [GitHug](https://github.com/Gazler/githug)
 * [Try GitHub](http://try.github.io)
 
-If you've been using git for a while, but it feels like repeating magical
-incantations (while praying that nothing goes wrong), then you may find these
-helpful:
+If you've been using git for a while, but it feels like repeating magical incantations \(while praying that nothing goes wrong\), then you may find these helpful:
 
 * [Git for Ages 4 and Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) - video of a presentation/demo
 * [Think Like a Git](http://think-like-a-git.net/)
@@ -192,17 +161,21 @@ helpful:
 You'll often be asked to rebase your branch before we merge a pull request as Exercism likes to keep a linear project commit history. This is accomplished with git rebase. It takes the current branch and places all the commits at the front of the branch that you're rebasing with.
 
 For example, rebasing the current branch on top of upstream/master:
-```
+
+```text
  git rebase upstream/master
 ```
+
 Project commit history:
-```
+
+```text
                        -- current branch --
                       /
 --- master branch ----
 ```
 
 ### Interactive Rebase
+
 The rebase command has an option called `-i, --interactive` which will open an editor with a list of the commits which are about to be changed. This list accepts commands, allowing the user to edit the list before initiating the rebase action.
 
 Using the example from above, we have 5 commits that should be squashed into one.
@@ -220,6 +193,7 @@ To interactively rebase, use the following incantation:
 ```bash
 $ git rebase -i HEAD~5
 ```
+
 This will bring up an editor with the following information:
 
 ```bash
@@ -258,3 +232,4 @@ fixup bb89a77 update config
 ```
 
 [Further Reading](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+

@@ -1,19 +1,18 @@
-﻿# Maintaining an Exercism Language Track
+# README
 
-* [Philosophy](#philosophy)
+\# Maintaining an Exercism Language Track
 
-  * [Be Kind](#be-kind)
-  * [Be Responsive](#be-responsive)
-  * [Empower New Contributors](#empower-new-contributors)
-  * [Recognize Contributions](#recognize-contributions)
-  * [Praise in Public, Reprimand in Private](#praise-in-public-reprimand-in-private)
-  * [Improve the Learning Experience](#improve-the-learning-experience)
-  * [Collaborate](#collaborate)
-
-* [Day-to-Day Tactics](#day-to-day-tactics)
-
-  * [Watch Key Repositories](#watch-key-repositories)
-  * [Perform Common Tasks](#perform-common-tasks)
+* [Philosophy](./#philosophy)
+  * [Be Kind](./#be-kind)
+  * [Be Responsive](./#be-responsive)
+  * [Empower New Contributors](./#empower-new-contributors)
+  * [Recognize Contributions](./#recognize-contributions)
+  * [Praise in Public, Reprimand in Private](./#praise-in-public-reprimand-in-private)
+  * [Improve the Learning Experience](./#improve-the-learning-experience)
+  * [Collaborate](./#collaborate)
+* [Day-to-Day Tactics](./#day-to-day-tactics)
+  * [Watch Key Repositories](./#watch-key-repositories)
+  * [Perform Common Tasks](./#perform-common-tasks)
 
 ## Philosophy
 
@@ -21,8 +20,7 @@
 
 First and foremost, strive always to be kind, humble and show gratitude for the work being contributed.
 
-**_Kind_ is not the same thing as _nice_.** Being kind does not mean being a pushover.
-Doing the right thing is not always the thing that pleases the most people.
+_**Kind**_ **is not the same thing as** _**nice**_**.** Being kind does not mean being a pushover. Doing the right thing is not always the thing that pleases the most people.
 
 ### Be Responsive
 
@@ -34,12 +32,12 @@ When responding to someone, `@`-mention them. This will ensure that they'll get 
 
 As a maintainer, your most important task is to make it as easy as possible for people to successfully contribute. The exact details will vary, but often this means things like:
 
-- documenting or scripting the necessary steps to get started with the codebase
-- helping people understand how to use the tools successfully (including git and GitHub)
-- writing detailed issues about work that needs to be done so that someone without knowledge of the project can easily find something to work on
-- improving the tooling to reduce friction
-- answering questions
-- reviewing pull requests
+* documenting or scripting the necessary steps to get started with the codebase
+* helping people understand how to use the tools successfully \(including git and GitHub\)
+* writing detailed issues about work that needs to be done so that someone without knowledge of the project can easily find something to work on
+* improving the tooling to reduce friction
+* answering questions
+* reviewing pull requests
 
 ### Recognize Contributions
 
@@ -59,22 +57,20 @@ The exercises often start out as an experiment. As people do the exercises we le
 
 Over time we try to:
 
-- improve the problem descriptions in [exercism/problem-specifications](https://github.com/exercism/problem-specifications)
-- add missing edge cases in the test suites
-- reorder tests to allow a more incremental approach to solving the problem
-- improve the test suites to avoid pushing people towards specific solutions
-- reorder exercises to provide a gentler learning curve on the site
-- deprecate exercises that don't provide enough value
+* improve the problem descriptions in [exercism/problem-specifications](https://github.com/exercism/problem-specifications)
+* add missing edge cases in the test suites
+* reorder tests to allow a more incremental approach to solving the problem
+* improve the test suites to avoid pushing people towards specific solutions
+* reorder exercises to provide a gentler learning curve on the site
+* deprecate exercises that don't provide enough value
 
 ### Collaborate
 
 Maintaining a track is so much more fun and interesting when there are several people actively involved in the process.
 
-Even with full push access, **create pull requests**. This notifies the other maintainers about the change.
-As a general rule, ensure a fellow maintainer reviews your pull request, unless it is utterly trivial.
+Even with full push access, **create pull requests**. This notifies the other maintainers about the change. As a general rule, ensure a fellow maintainer reviews your pull request, unless it is utterly trivial.
 
-When you start working on an issue, claim it either by assigning it to yourself or by adding a comment that you're taking it.
-This avoids having several people do the same work by accident.
+When you start working on an issue, claim it either by assigning it to yourself or by adding a comment that you're taking it. This avoids having several people do the same work by accident.
 
 If you have a big list of similar, related things, consider [generating individual issues](https://github.com/exercism/docs/issues/10) for each one so that people can claim individual tasks easily.
 
@@ -86,15 +82,16 @@ This will notify you of all new issues, pull requests, and comments.
 
 In addition to the language track repository itself, you may also want to watch:
 
-- the [exercism/problem-specifications](http://github.com/exercism/problem-specifications) repository which contains all of the exercise descriptions and metadata. Many discussions about improvements to the exercises happen here.
-- the [exercism/discussions](http://github.com/exercism/discussions) repository where a lot of high-level discussions about Exercism itself happen (roadmap, direction, ideas, conundrums).
+* the [exercism/problem-specifications](http://github.com/exercism/problem-specifications) repository which contains all of the exercise descriptions and metadata. Many discussions about improvements to the exercises happen here.
+* the [exercism/discussions](http://github.com/exercism/discussions) repository where a lot of high-level discussions about Exercism itself happen \(roadmap, direction, ideas, conundrums\).
 
 ### Perform Common Tasks
 
-- [Triage issues](/you-can-help/triage-issues.md)
-- [Review and merge pull requests](/you-can-help/review-pull-requests.md)
-- [Add and improve language-specific documentation](/language-tracks/documentation/for-consumers.md)
-- Discuss improvements in the exercises
-- [Implement](/you-can-help/make-up-new-exercises.md) or [port](/you-can-help/implement-an-exercise-from-specification.md) new exercises
-- Improve the development tooling (e.g. implementing continuous integration)
-- Recognize helpful contributions and [invite new maintainers](/maintaining-a-track/inviting-new-maintainers.md)
+* [Triage issues](../you-can-help/triage-issues.md)
+* [Review and merge pull requests](../you-can-help/review-pull-requests.md)
+* [Add and improve language-specific documentation](../language-tracks/documentation/for-consumers.md)
+* Discuss improvements in the exercises
+* [Implement](../you-can-help/make-up-new-exercises.md) or [port](../you-can-help/implement-an-exercise-from-specification.md) new exercises
+* Improve the development tooling \(e.g. implementing continuous integration\)
+* Recognize helpful contributions and [invite new maintainers](inviting-new-maintainers.md)
+

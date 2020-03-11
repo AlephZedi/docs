@@ -1,7 +1,5 @@
 # Roadmap
 
-[design-of-exercism]: http://tinyletter.com/exercism/letters/the-delightful-design-of-exercism
-
 We have two separate roadmaps, one for the overall product, and one for the curriculum, which encompasses all of the exercises for all of the supported programming languages.
 
 ## The Product
@@ -14,7 +12,7 @@ Once we have explored the key questions, we will progress to exploring wireframe
 
 We will release the new website under the same license as the existing one.
 
-For updates, sign up for the "behind the scenes" [newsletter][].
+For updates, sign up for the "behind the scenes" [newsletter](http://tinyletter.com/exercism).
 
 ## The Curriculum
 
@@ -22,4 +20,3 @@ For the curriculum, the focus is on _sustainability_. We need to have enough peo
 
 At the level of each individual track, we're working on improving the experience for people working through the solutions. Each exercise should be compelling, it should inspire useful, interesting conversations, and the difficulty of exercises throughout the track should gradually increase.
 
-[newsletter]: http://tinyletter.com/exercism

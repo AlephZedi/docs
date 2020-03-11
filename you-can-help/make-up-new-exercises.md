@@ -10,7 +10,7 @@ If your exercises is relevant to several tracks, then you will create a _generic
 
 Whether you are creating a generic or a custom exercise, the basic idea is the same. Some details will differ, and these are described in detail below.
 
-* First, choose a name for your exercise. The name must be unique. Verify the list of [generic problem specifications][spec-exercises], as well as the language track in question (navigate to the `exercises` directory in the repository).
+* First, choose a name for your exercise. The name must be unique. Verify the list of [generic problem specifications](https://github.com/exercism/problem-specifications/tree/master/exercises), as well as the language track in question \(navigate to the `exercises` directory in the repository\).
 * Derive the _slug_ of the exercise from the name by making the name all lowercase and separating words using hyphens.
 * Write a _blurb_, which is a one-sentence summary of the problem to be solved.
 * Write a more detailed _description_ of the problem to be solved.
@@ -22,7 +22,7 @@ The `description.md` contains a general description of the problem to be solved 
 
 The `metadata.yml` contains the blurb and source. It has the following structure:
 
-```
+```text
 ---
 blurb: "A one-sentence summary of the problem to be solved."
 title: "An *optional* field containing the name of this exercise if the default algorithm does not correctly convert the slug to the correct name. The default algorithm capitalises the first letter of each hyphen-separated word. If the default algorithm correctly converts the slug, this field can/should be omitted."
@@ -32,11 +32,11 @@ source_url: "http://example.com/reference"
 
 ### Generic Problem Specifications
 
-Generic problem specifications live in the [exercism/problem-specifications][problem-specifications] repository, with the [exercises directory][spec-exercises].
+Generic problem specifications live in the [exercism/problem-specifications](https://github.com/exercism/problem-specifications) repository, with the [exercises directory](https://github.com/exercism/problem-specifications/tree/master/exercises).
 
-A generic specification consists of three files in a directory named after the slug (`hello-world`, in this case):
+A generic specification consists of three files in a directory named after the slug \(`hello-world`, in this case\):
 
-```
+```text
 exercises/
 └── hello-world
     ├── canonical-data.json
@@ -56,13 +56,13 @@ Some general guidelines:
 
 The expected format for the `canonical-data.json` file can be found in the [canonical schema](https://github.com/exercism/problem-specifications/blob/master/canonical-schema.json).
 
-Once your pull request to the problem-specifications repository is merged, you can follow the directions for [implementing an exercise from specification][porting-an-exercise].
+Once your pull request to the problem-specifications repository is merged, you can follow the directions for [implementing an exercise from specification](implement-an-exercise-from-specification.md).
 
 ### Custom Problem Specifications
 
 Within the language track repository, the metadata files need to go in a `.meta` directory within the exercise directory when you submit your implementation of the exercise.
 
-```
+```text
 exercises/
 └── hello-world
     └── .meta
@@ -70,8 +70,5 @@ exercises/
         └── metadata.yml
 ```
 
-Once you've defined these, you can submit them along with your pull request that [implements the exercise][porting-an-exercise].
+Once you've defined these, you can submit them along with your pull request that [implements the exercise](implement-an-exercise-from-specification.md).
 
-[problem-specifications]: https://github.com/exercism/problem-specifications
-[spec-exercises]: https://github.com/exercism/problem-specifications/tree/master/exercises
-[porting-an-exercise]: /you-can-help/implement-an-exercise-from-specification.md

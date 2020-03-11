@@ -4,10 +4,9 @@ In order to give maintainers more control over the contents and formatting of ea
 
 The command to regenerate all the READMEs is:
 
-```
+```text
 configlet generate .
 ```
 
-See the [exercise READMEs][readmes] documentation for more details.
+See the [exercise READMEs](../language-tracks/exercises/anatomy/readmes.md) documentation for more details.
 
-[readmes]: /language-tracks/exercises/anatomy/readmes.md
