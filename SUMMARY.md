@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Documentation](README.md)
+* [API reference](api-reference.md)
 * [contributing](contributing/README.md)
   * [Git Basics](contributing/git-basics.md)
   * [Pull Request Guidelines](contributing/pull-request-guidelines.md)
