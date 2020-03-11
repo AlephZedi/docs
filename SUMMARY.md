@@ -55,3 +55,7 @@
   * [Maintainer Configuration](maintaining-a-track/maintainer-configuration.md)
 * [Getting Involved in an Exercism Language Track](contributing-to-language-tracks.md)
 
+## External links
+
+* [Squarespace](https://squarespace.com)
+
